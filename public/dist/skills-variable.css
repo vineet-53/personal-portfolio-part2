@@ -1,0 +1,14 @@
+:root {
+  --java-bar: 50%;
+  --html-bar: 89%;
+  --javascript-bar: 76%;
+  --c-bar: 90%;
+  --backend-bar: 55%;
+  --css-bar: 80%;
+  --java-bar-bg: hsl(120, 42%, 29%);
+  --html-bar-bg: hsl(240, 31%, 53%);
+  --javascript-bar-bg: hsl(350, 67%, 56%);
+  --c-bar-bg: hsl(0, 51%, 51%);
+  --backend-bar-bg: hsl(300, 56%, 59%);
+  --css-bar-bg: hsl(300, 100%, 50%);
+}

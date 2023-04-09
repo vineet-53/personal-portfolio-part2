@@ -1,0 +1,220 @@
+/* intro section */
+
+.intro-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  padding-inline: var(--container-padding);
+  min-height: 4rem;
+  justify-content: space-between;
+  background-color: var(--alternate-bg);
+}
+.navbar-logo {
+  font-weight: 700;
+}
+.navbar-list {
+  z-index: 999;
+  position: absolute;
+  top: 3rem;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+  font-weight: var(--fw-navbar-list);
+  background-color: var(--header-navbar-list-bg);
+  padding-block-end: 2rem;
+  transition: 0.5s ease-in-out;
+  padding-inline: var(--header-nav-padding-inline);
+}
+.navbar-list.active {
+  left: 0;
+}
+#nav-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#nav-toggle span {
+  width: 100%;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 99999px;
+  transition: 0.2s ease-in-out;
+}
+.navbar-list.active ~ #nav-toggle span:first-child {
+  transform: translate(-1px);
+  transform-origin: left;
+  rotate: calc(45deg);
+}
+.navbar-list.active ~ #nav-toggle span:nth-child(even) {
+  opacity: 0;
+}
+.navbar-list.active ~ #nav-toggle span:last-child {
+  transform: translate(-2px);
+  transform-origin: left;
+  rotate: -45deg;
+}
+/* intro main section */
+
+.hero-container {
+  padding-inline: var(--section-padding-inline);
+}
+
+.hero-img-container {
+  padding-block: 2rem;
+}
+.hero-img-container img {
+  width: 100%;
+  border-radius: 0.5em;
+  margin-block: auto;
+}
+.hero-text-container {
+}
+/* about section
+ */
+.about-section {
+  padding-inline: var(--section-padding-inline);
+  background-color: var(--alternate-bg);
+}
+
+.about-img-container img {
+  width: 100%;
+  border-radius: 0.3rem;
+}
+.about-text-container {
+}
+.about-text-container h1 {
+}
+/* skills section */
+.skills-section {
+  padding-inline: var(--section-padding-inline);
+  min-height: 80vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.skills-section h2 {
+  margin: 0;
+}
+.skills-bar-container {
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline: 2rem;
+}
+.outer {
+  border: 1px solid var(--skills-outer-border);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  min-width: 100%;
+  flex: 1;
+}
+.outer:hover .inner {
+  left: 0;
+  color: white;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 2rem;
+  position: absolute;
+  left: -100%;
+  height: inherit;
+  color: white;
+  transition: 0.3s ease-in;
+}
+
+.inner[data-skill="html"] {
+  background-color: var(--html-bar-bg);
+  width: var(--html-bar);
+}
+.inner[data-skill="backend"] {
+  background-color: var(--backend-bar-bg);
+  width: var(--backend-bar);
+}
+.inner[data-skill="c"] {
+  background-color: var(--c-bar-bg);
+  width: var(--c-bar);
+}
+.inner[data-skill="javascript"] {
+  background-color: var(--javascript-bar-bg);
+  width: var(--javascript-bar);
+}
+.inner[data-skill="java"] {
+  background-color: var(--java-bar-bg);
+  width: var(--java-bar);
+}
+.inner[data-skill="css"] {
+  background-color: var(--css-bar-bg);
+  width: var(--css-bar);
+}
+/* contact sectino */
+.contact-section {
+  padding-inline: var(--section-padding-inline);
+  background-color: var(--alternate-bg);
+  padding-top: 0;
+}
+
+.contact-section .form-container {
+  padding-inline: var(--container-padding);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.form-control label {
+  font-size: 1.2em;
+}
+.contact-form .form-control input {
+  outline-style: none;
+  border: 1px solid var(--input-border);
+  border-radius: 99999px;
+  height: 30px;
+  padding: 0 1rem;
+  width: 100%;
+}
+.contact-form .form-control a.btn {
+  display: inline-block;
+  margin: 0;
+  width: max-content;
+  align-self: center;
+}
+/* scroll up */
+.circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: var(--scrollup-bg);
+  justify-content: center;
+  border-radius: 999999px;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.circle:hover {
+  background-color: var(--scrollup-hover-bg);
+}
+.circle-container {
+  position: sticky;
+  bottom: 1rem;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 0 1rem 0 1rem;
+}

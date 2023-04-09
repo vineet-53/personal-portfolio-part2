@@ -1,0 +1,125 @@
+/* utility classes */
+:root {
+  --container-padding: 2rem;
+  --section-padding-inline: 1rem;
+  --header-nav-padding-inline: 1rem;
+  --primary-btn-bg: hsl(240, 56%, 37%);
+  --primary-btn-hover-bg: hsl(240, 70%, 50%);
+  --secondary-btn-outline: hsl(240, 56%, 37%);
+  --header-navbar-list-bg: rgb(255, 253, 255);
+  --fw-navbar-list: 400;
+  --hover-link: hsl(240, 56%, 37%);
+  --white: white;
+  --h2--after-line-clr: hsl(240, 56%, 37%);
+  --alternate-bg: hsl(0, 0%, 83%);
+  --skills-outer-border: hsl(0, 0%, 83%);
+  --input-border: hsl(0, 0%, 83%);
+  --scrollup-bg: hsl(0, 0%, 12%);
+  --scrollup-hover-bg: rgb(61, 61, 61);
+}
+h1 {
+  font-size: clamp(2rem, 2vw + 1rem, 2.8rem);
+  text-align: center;
+}
+h1 span {
+  color: rgb(56, 56, 56);
+}
+h2 {
+  color: hsl(240, 56%, 37%);
+  padding: 0;
+  position: relative;
+  width: max-content;
+  left: 50%;
+  transform: translate(-50%);
+}
+h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  border: 1px solid var(--h2--after-line-clr);
+  opacity: 0.7;
+}
+h2:hover {
+  color: hsl(240, 70%, 50%);
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+section {
+  padding-block: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.grid-item {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-align {
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.btn {
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  border-radius: 99999px;
+  cursor: pointer;
+  margin: 0 2rem;
+  width: 100%;
+}
+.primary-btn {
+  background-color: var(--primary-btn-bg);
+  color: white;
+}
+.primary-btn:hover {
+  background-color: var(--primary-btn-hover-bg);
+}
+.secondary-btn {
+  outline: 2px solid var(--secondary-btn-outline);
+}
+.secondary-btn:hover {
+  color: var(--secondary-btn-outline);
+}
+.hover-link:hover {
+  color: var(--hover-link);
+}
+
+.text-xsm {
+  font-size: 0.8rem;
+}
+.text-md {
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.8rem);
+}
+.text-center {
+  text-align: center;
+}
+.current {
+  min-height: 100vh;
+}
+img,
+h1,
+h2,
+h3,
+p {
+  transition: 0.5s ease-in-out;
+}
+img:hover {
+  opacity: 0.8;
+}
